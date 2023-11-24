@@ -56,7 +56,7 @@
 	<div class="flex justify-center">
 		{#if loaded}
 			<Card>
-				<h1 class="font-bold text-primary-500">Verdolaga 🤑</h1>
+				<h1 class="font-bold text-primary-500 text-xl">Verdolaga 🤑</h1>
 				<div class="text-center mb-6">
 					<small class="text-primary-500 italic">Blue venta: ${$apiData$.venta}</small>
 				</div>
