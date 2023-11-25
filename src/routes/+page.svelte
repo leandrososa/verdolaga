@@ -3,6 +3,7 @@
 	import { writable } from 'svelte/store';
 	import { Card, Label, Input, ButtonGroup, InputAddon, Spinner } from 'flowbite-svelte';
 	import { GithubSolid } from 'flowbite-svelte-icons';
+	import CardImage from '$lib/images/card-image-gradient.png';
 
 	// Bandera para saber si ya cargamos los datos de la API
 	let loaded = false;
@@ -55,10 +56,10 @@
 <section>
 	<div class="flex justify-center">
 		{#if loaded}
-			<Card>
+			<Card img={CardImage}>
 				<h1 class="font-bold text-primary-500 text-xl">Verdolaga 🤑</h1>
 				<div class="text-center mb-6">
-					<small class="text-primary-500 italic">Blue venta: ${$apiData$.venta}</small>
+					<small class="text-secondary-500 font-bold italic">Blue venta: ${$apiData$.venta}</small>
 				</div>
 				<div class="mb-6">
 					<Label for="ars-input" class="block mb-2">Monto en pesos (ARS)</Label>
@@ -100,7 +101,7 @@
 	<small class="italic text-primary block text-center"
 		>Construido con Flowbite, Tailwind & SvelteKit.</small
 	>
-	<div class="text-center">
+	<div class="text-center mt-4">
 		<a class="inline-block" href="https://github.com/leandrososa/verdolaga"><GithubSolid /></a>
 	</div>
 </section>
